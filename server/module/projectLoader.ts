@@ -1,10 +1,11 @@
 import path from 'path';
 import fs from 'fs/promises';
 import { PackageJSON } from '~/types/packageJson';
-import { spawn} from 'child_process';
+import { spawn } from 'child_process';
+
+const __dirname = process.cwd();
 
 export async function loadProject(): Promise<PackageJSON> {
-  const __dirname = process.cwd();
   console.log('__dirname', __dirname);
 
   const packageJsonPath = path.join(__dirname, 'package.json');
@@ -15,7 +16,7 @@ export async function loadProject(): Promise<PackageJSON> {
 export function runScript(script: string) {
   const command = `npm run ${script}`;
   console.log(command);
-  const process = spawn(command);
+  const process = spawn(command, [], { cwd: __dirname });
   process.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
