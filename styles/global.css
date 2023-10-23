@@ -11,8 +11,9 @@
   --blur-color: rgba(237, 240, 242, 0.25);
   --blur: blur(10px);
 
-  --color-warning: #ffd0ca;
-  --color-success: #aeccb3;
+  --color-success: #7BBB44;
+  --color-warning: #F5A623;
+  --color-error: #F14235;
 
   --animation: 0.2s ease-in-out;
   --border-radius: 8px;
