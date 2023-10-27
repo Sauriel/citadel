@@ -1,7 +1,13 @@
 <template>
-  <li class="project-entry" :class="`project-entry--${project.status}`">
-    <Icon :name="icon" />
-    <span class="project-name">{{ project.name }}</span>
+  <li>
+    <NuxtLink
+      :to="`/project/${project.hash}`"
+      class="project-entry"
+      :class="`project-entry--${project.status}`"
+    >
+      <Icon :name="icon" />
+      <span class="project-name">{{ project.name }}</span>
+    </NuxtLink>
   </li>
 </template>
 

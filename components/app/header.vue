@@ -1,6 +1,8 @@
 <template>
   <header id="header">
-    <NuxtImg src="/images/citadel_logo.png" height="28" />
+    <NuxtLink to="/">
+      <NuxtImg src="/images/citadel_logo.png" height="28" />
+    </NuxtLink>
     <Icon name="heroicons:cog-8-tooth-20-solid" />
   </header>
 </template>

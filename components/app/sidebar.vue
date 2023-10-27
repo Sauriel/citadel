@@ -1,43 +1,18 @@
 <template>
   <div id="sidebar">
     <ul id="project-list">
-      <AppSidebarEntry v-for="(project, index) of projects" :key="index" :project="project" />
+      <AppSidebarEntry v-for="project of projects" :key="project.hash" :project="project" />
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
+import useProjectsStore from '~/stores/project';
 import type { SidebarProjectEntry } from '~/types/project';
 
-// type Props = {
-//   value: string;
-// }
+const projectStore = useProjectsStore();
 
-// type Emits = {
-//   (e: 'update', payload: string): void;
-// }
-
-// const props = defineProps<Props>();
-// const emit = defineEmits<Emits>();
-
-const projects = ref<SidebarProjectEntry[]>([
-  {
-    status: 'running',
-    name: 'citadel-app'
-  },
-  {
-    status: 'error',
-    name: 'scribe'
-  },
-  {
-    status: 'stopped',
-    name: 'roleplay-nexus'
-  },
-  {
-    status: 'stopped',
-    name: 'project with a very long name that should be omitted'
-  },
-]);
+const projects = computed<SidebarProjectEntry[]>(() => projectStore.projects);
 </script>
 
 <style scoped>
