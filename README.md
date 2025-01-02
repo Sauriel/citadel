@@ -1,75 +1,38 @@
-# Nuxt 3 Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Citadel
 
-## Setup
+Citadel is a self-hosted Nuxt-based website designed to deploy Nuxt projects on your own server. It integrates with GitHub to automatically pull your repositories and deploy them whenever a new commit is made. Citadel simplifies the process of managing multiple Nuxt deployments, making it easier to host your projects without needing to configure complex deployment workflows.
 
-Make sure to install the dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- Self-hosted Nuxt.js website for easy project deployments.
+- GitHub integration to automatically pull and deploy your repositories.
+- Supports automatic deployments on new commits to your GitHub repositories.
+- Simplified management of Nuxt-based projects on your own server.
 
-# pnpm
-pnpm install
+## Usage
 
-# yarn
-yarn install
+Once set up, Citadel will listen for GitHub webhook events and automatically deploy your Nuxt projects when a new commit is pushed to the configured repositories. You can monitor the deployment status and logs through the Citadel dashboard.
 
-# bun
-bun install
-```
+## License
 
-## Development Server
+MIT License. See [LICENSE](LICENSE) for more details.
 
-Start the development server on `http://localhost:3000`:
+## Work in Progress
 
-```bash
-# npm
-npm run dev
+Citadel is a work in progress, and there may be features or improvements to be added in future versions. Contributions are welcome!
 
-# pnpm
-pnpm run dev
+## TODO
 
-# yarn
-yarn dev
+- [ ] Improve deployment status feedback.
+- [ ] Add more configuration options for deployments.
+- [ ] Enhance security features and access controls.
+- [ ] Write automated tests.
 
-# bun
-bun run dev
-```
+## Acknowledgments
 
-## Production
+- Thanks to the Nuxt.js and GitHub communities for their support in making this project possible.
 
-Build the application for production:
+---
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+For any issues or questions, feel free to open an issue on this repository.
